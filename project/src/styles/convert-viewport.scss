@@ -1,0 +1,23 @@
+// 使用scss的math函数
+@use "sass:math";
+
+// 默认设计稿的宽度
+$designWidth: 1920;
+// 默认设计稿的高度
+$designHeight: 1080;
+// 其他窗口宽度
+$otherWidth: 170;
+// 其他串口高度
+$otherHeight: 50;
+// 设计值转为实际值的函数
+@function vw($px) {
+  // 因为有默认导航栏占据宽高,不能直接转换vw
+  // @return calc(#{$px / $designWidth} * (100vw - #{$otherWidth}px));
+  @return $px / $designWidth * 100vw;
+}
+
+//px转为vh的函数
+@function vh($px) {
+  @return $px / $designHeight * 100vh;
+  // @return calc(#{$px / $designHeight} * (100vh - #{$otherHeight}px));
+}

@@ -1,0 +1,33 @@
+@import './convert-viewport';
+// 大屏标题等重要文本信息
+.important-text {
+  height: vh(30);
+
+  font-family: TencentSansW7;
+  font-weight: 700;
+  font-size: vw(20);
+  color: #ffffff;
+  
+  letter-spacing: vw(0.91);
+  line-height: vh(30);
+}
+// 大屏描述类文本信息
+.description-text {
+  
+  font-family: PingFangSC-Regular;
+  font-weight: Regular;
+  font-size: vw(14);
+  color: #ffffff;
+
+  opacity: 0.5;
+  letter-spacing: 0;
+}
+// 滚动遮罩层
+.ns-wrappers {
+  overflow: hidden;
+
+  margin: 0 auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
